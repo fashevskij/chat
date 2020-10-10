@@ -71,7 +71,8 @@ body {
     height: 100%;
 }
 
-#menu a {
+#menu a,
+button  {
     font-family: Bradley Hand, cursive;
     position: relative;
     top: 20%;
@@ -91,11 +92,62 @@ body {
     -moz-border-radius:;
     -ms-border-radius:;
     -o-border-radius:;
-} 
+}
   #menu a:hover { background: rgba(255,255,255,.2); }
   #menu a:active { background: rgb(130, 171, 199); }
 
 #menu a:hover {
     background: #65ddfbc7;
 }
-    /*==================
+/*==================
+Стили для модальных окон
+===================*/
+.modal {
+    display: none;
+    position:fixed;
+    left:5%;
+    top:10%;
+    width:300px;
+    height:250px;
+    background: rgba(78, 185, 228, 0.856);
+    border-radius:10%;
+    -webkit-border-radius:10%;
+    -moz-border-radius:10%;
+    -ms-border-radius:10%;
+    -o-border-radius:10%;
+}
+.modal h2{
+    font-family: Bradley Hand, cursive;
+    position: absolute;
+    left:15%;
+    top: 8%;
+}    
+.modal .positions{
+    font-family: Bradley Hand, cursive;
+    padding: 15px;
+    position: absolute;
+    top:20%;
+    left:10%;
+    width: 250px;
+}
+.modal .positions button{
+    padding:12px;
+    margin:5px;
+    margin-left: 20px;
+}
+.modal .close {
+    position:absolute;
+    right:20px;
+    top:20px;
+    transition: .5s;
+    cursor: pointer;;
+    z-index: 1;
+}
+.modal .close:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
