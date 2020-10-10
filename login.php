@@ -1,5 +1,5 @@
 
-<div class="modal" id="account-modal">
+<div class="modal" id="authorization" >
 			<div class="close">X</div>
 			<h2>Авторизация</h2>
 	<div class="positions">
@@ -10,15 +10,9 @@
 			<p>введите свой пароль: <br/>
 			<input type="password" name="password">
 			</p>
-			<p>
 			<!--type="sumbit - чтобы данные отправлялись на сервер-->
 			<button type="submit">Войти</button>
-
-			<button> 
-			<a href="registr.php" id="registr">Регистрация</a>
-			</button>
-
-			</p>		
+			<button type="button"id="registr">Регистрация</button>
 		</form>
 	</div>
 </div>
