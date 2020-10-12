@@ -1,4 +1,7 @@
-
+<?php
+include "configs/db.php";
+include "configs/settings.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +9,7 @@
 </head>
 <body>
 <div class="up">
-<?php include "login.php"?>
-<?php include "registr.php"?>
+
 		<div class="logo">
 			<img src="/images/Chat Folder.png"> <span><b>Web</b><i>Chat</i></span>
 		</div>  
@@ -16,8 +18,11 @@
 		</div>
 	</div>
 	<div class="home">	
+	<?php include "login.php"?>
+	<?php include "registration.php"?>
     </div>   
 </body>
+
 <script src="js/modal_close_btn.js"></script>
 <script src="js/authorization.js"></script>
 </html>
