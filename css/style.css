@@ -158,3 +158,33 @@ button  {
 }
 
 
+/*==================
+Модельное окно с контактами
+===================*/
+#contacts-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contacts-modal ul li {
+    position: relative;
+    padding: 30px;
+}
+
+#contacts-modal ul .avatar {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+#contacts-modal ul .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+#contacts-modal ul h2 {
+    margin: auto;
+}
+
