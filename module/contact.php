@@ -1,7 +1,7 @@
 <?php
 //Модальное окно контактов
 ?>
-<div class="modal" id="contacts-modal">
+<div class="modal contact" id="contacts-modal">
 		<div class="close">X</div>
 		<ul id="frendList">
 			<?php
@@ -32,10 +32,10 @@
 						$col_frends = mysqli_num_rows($frendsResult);
 						if ($col_frends > 0) {//переберем ответы от базы данных и если добавлен пользователь то выводим
 							?>
-							<div data-link="http://chat.local/delete_friends.php?user=<?php echo $user["id_User"]; ?>"onclick="dellFrends(this)" >Удалить из друзей </div><?php	
+							<div data-link="http://localhost/delete_friends.php?user=<?php echo $user["id_User"]; ?>"onclick="dellFrends(this)" >Удалить из друзей </div><?php	
 						}else{//если нет то выводим
 							?>
-							<div data-link="http://chat.local/add_friends.php?user=<?php echo $user["id_User"]; ?> "onclick="addFrends(this)">Добавить в друзья </div>
+							<div data-link="http://localhost/add_friends.php?user=<?php echo $user["id_User"]; ?> "onclick="addFrends(this)">Добавить в друзья </div>
 						<?php } ?>
 				</li>
 				<?php

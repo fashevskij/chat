@@ -7,5 +7,6 @@ btnOpenContact.addEventListener('click', function () {
     contactModal.style.display = "block";
     contactModal.style.height = "calc(100% - 100px)";
     contactModal.style.width = "200px";
+    contactModal.style.borderRadius = "0";
 	close(2, contactModal);//закрытие модального окна через функцию
 });

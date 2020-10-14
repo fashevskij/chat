@@ -26,9 +26,10 @@ include "registration.php";
 					<a href="#" id="open-contact">Contact</a>
 					<a href="#" id="settings">Settings</a>
 					
-					<a href="/"><?php setcookie("id","", 0); echo $user["name"]; ?> Log out</a>
+					<a href="exit.php"><?php echo $user["name"];?> Log out</a>
 					<?php	//кнопка с очисткой кук и перенаправлением на главную при выходе				
 					include "module/contact.php";
+					include "module/content.php";
 					
 				}else{
 					?>
@@ -43,4 +44,5 @@ include "registration.php";
 <script src="js/modal_close_btn.js"></script>
 <script src="js/authorization.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/friends_operation.js"></script>
 </html>
