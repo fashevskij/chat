@@ -20,8 +20,8 @@
 				<li>
 					<div class="avatar">
 					<img src=<?php echo $user["photo"]; ?>>
-					</div>
 					<h2><?php echo $user["name"]; ?></h2>
+					</div>
 					<?php
 					//создаем запрос к таблице друзе и проверяем кто добавлен а кто нет
 						$sql = "SELECT * FROM frends WHERE 
@@ -32,10 +32,11 @@
 						$col_frends = mysqli_num_rows($frendsResult);
 						if ($col_frends > 0) {//переберем ответы от базы данных и если добавлен пользователь то выводим
 							?>
-							<div data-link="http://localhost/delete_friends.php?user=<?php echo $user["id_User"]; ?>"onclick="dellFrends(this)" >Удалить из друзей </div><?php	
+							<a data-link="http://www.localhost/delete_friends.php?user=<?php echo $user["id_User"]; ?>"onclick="dellFrends(this)" >Dellete friend </a>
+							<?php	
 						}else{//если нет то выводим
 							?>
-							<div data-link="http://localhost/add_friends.php?user=<?php echo $user["id_User"]; ?> "onclick="addFrends(this)">Добавить в друзья </div>
+							<a data-link="http://www.localhost/add_friends.php?user=<?php echo $user["id_User"]; ?> "onclick="addFrends(this)">Add friend </a>
 						<?php } ?>
 				</li>
 				<?php

@@ -45,4 +45,5 @@ include "registration.php";
 <script src="js/authorization.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/friends_operation.js"></script>
+<script src="js/sms.js"></script>
 </html>

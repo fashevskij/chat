@@ -1,22 +1,20 @@
 <div id="content">
-	<div id="user">			
 		<form class="search" method="POST">
 			<input type="text" name="search-text">
 			<button type="submit" id="send">
 				<img src="images/search.png">
 			</button>
-			
 		</form>
 	</div>
-	<div class="list">
+	<div class="list" >
 		<ul>
 			<?php
          //include - подключить файл, а имеено список контактов 
          	include "list.php";    
 			?>
 		</ul>
-		</div>
-	<div class = "message">
+	</div>
+	<div class = "message"">
 		<div id="sms">
 		    <?php
 
@@ -25,7 +23,7 @@
 		    ?>
 		</div> 
 		
-		<form class="form" action="" method="POST">
+		<form class="form" method="POST">
 			<?php
 		if (isset ($_GET["user"])){
 		?>    
@@ -39,6 +37,6 @@
 			}
 			?>
 		</form>
-	</div>
+	
 </div>
 </div>

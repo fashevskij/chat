@@ -36,6 +36,8 @@ if (isset($_POST["email"]) && isset($_POST["password"])
 		//создаем куки для хранения данных пользователя
 		setcookie("id", $user["id_User"], time()+3600);
 		header("Location: /");//обновляем страницу
+		$status = "UPDATE `users` SET `status` = '1' WHERE `id_User` =" . $user["id_User"]; 
+		mysqli_query($connect, $status);
 	}else{//если нет то
 		echo "<h2>Логин или пароль не верны</h2>";
 		header("Location: /");	

@@ -10,7 +10,6 @@ if (isset($_COOKIE["id"])){
 		while ($i < $col_users) {
 			//mysqli_fetch_assoc - преобразовать данные пользователя в массив
 		    $user = mysqli_fetch_assoc($result);
-		   
 		    ?>
 			<li>
 				<a href="index.php?user= <?php echo $user["id_User"]; ?>">
@@ -21,14 +20,10 @@ if (isset($_COOKIE["id"])){
 			    </a>
 			  </li>
 			 <?php
-			
 			$i++;	
-		  
 			} 
 		}else if (isset($_POST["search-text"])){
-			include "search_text.php";
+			include "../search_text.php";
 		}
-		
-		
 	    ?>
 	
