@@ -23,7 +23,7 @@ include "registration.php";
 					$result = mysqli_query($connect, $sql);//выполняем запрос к базе данных
 					$user = mysqli_fetch_assoc($result);//
 					?>
-					<a href="#" id="open-contact">Contact</a>
+					<a href="#" id="open-contact">Friends</a>
 					<a href="#" id="settings">Settings</a>
 					
 					<a href="exit.php"><?php echo $user["name"];?> Log out</a>

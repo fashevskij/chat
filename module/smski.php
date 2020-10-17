@@ -6,6 +6,19 @@ $userid = null;
 
 if(isset($_GET["user"])){
 		$userid = $_GET["user"];
+		$sql = "SELECT * FROM users WHERE id_User=" . $userid; 
+		$result = mysqli_query($connect, $sql);//оправляем запрос
+		$col_users = mysqli_num_rows($result);//получаем результат совпадений
+			//извлекаем результат в запроса
+			$user = mysqli_fetch_assoc($result);
+		?>
+		<div class="check-user">
+		<div class="avatar">
+		<img src=" <?php echo $user["photo"]; ?>">
+		</div>
+		<h2>Сhat with <?php echo $user["name"]; ?></h2>
+		</div>
+		<?php
 }else{
 		$userid = $_POST["id_User_2"];
 }

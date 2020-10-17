@@ -29,18 +29,20 @@ include "configs/db.php";
 
 <?php
 //если введены логин и пароль и они не пусты и была нажата кнопка регистарции
-if (isset($_POST["email"]) && isset($_POST["password"])
-	&& $_POST["email"] != "" && $_POST["password"] !="" && isset($_POST["registration"]) ){
-
+if (isset($_POST["registration"]) && $_POST["password"] !="" && $_POST["email"] != ""){
+$sql = "SELECT * FROM `users` WHERE `email` LIKE '" . $_POST["email"] . "'"; 
+$result = mysqli_query($connect, $sql);//оправляем запрос
+$col_users = mysqli_num_rows($result);//получаем результат совпадений
+if($col_users > 0){
+	echo "<h2>Произошла ошибка емацйл есть уже</h2>";
+}else{
 // Вставить в таблицу user введенные данныее нового пользователя
 $sql = "INSERT INTO `users` ( `email`, `password`, `name`) VALUES ('" . $_POST["email"] . "', '" . $_POST["password"] . "', '" . $_POST["name"] . "')";
 	//если запрос к бд выполнен успешно
 	if(mysqli_query($connect, $sql)){
 		echo "<h2>Пользователь добавлен</h2>";
-		header("Location: /");
-	}else{//весли нет то
-		echo "<h2>Произошла ошибка</h2>". mysqli_error($connect);
-		header("Location: /");
+		
 	}
+}
 }
 ?>

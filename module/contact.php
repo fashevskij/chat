@@ -30,6 +30,7 @@
 
 						$frendsResult = mysqli_query($connect, $sql);
 						$col_frends = mysqli_num_rows($frendsResult);
+						
 						if ($col_frends > 0) {//переберем ответы от базы данных и если добавлен пользователь то выводим
 							?>
 							<a data-link="http://www.localhost/delete_friends.php?user=<?php echo $user["id_User"]; ?>"onclick="dellFrends(this)" >Dellete friend </a>

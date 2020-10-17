@@ -257,6 +257,7 @@ button  {
     padding: 5px;
     position: relative;
     width: calc(100%-20px);
+ 
     
 }
 .list ul li a {
@@ -281,14 +282,11 @@ button  {
 
 .list ul li h2{
     position: absolute;
-    top: 10px;
     right: 5px;
+    top:0;
 }
 
-.avatar img {
-    width: 50px;
-    left: 10px;
-}
+
 .avatar img {
     width: 50px;
     left: 10px;
@@ -300,7 +298,14 @@ button  {
     left:2%;
     top:2%;
 }
-
+.check-user {
+    position: fixed;
+    top:80px;
+    width:40%;
+    height:6%;
+    background-color:rgba(128, 168, 200);
+    font-family: Bradley Hand, cursive;
+}
 /*==================
 Стиль скроллбара
 ===================*/

@@ -14,10 +14,9 @@
 			?>
 		</ul>
 	</div>
-	<div class = "message"">
+	<div class = "message">
 		<div id="sms">
 		    <?php
-
 		     //include - подключить файл, а имеено список сообщений
 		   include "addsms.php";
 		    ?>

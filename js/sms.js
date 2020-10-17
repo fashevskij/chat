@@ -43,4 +43,4 @@ var aj = new XMLHttpRequest();
 	var user = document.querySelector(".list");
 	user.innerHTML = aj.response;
 
-}
+};
