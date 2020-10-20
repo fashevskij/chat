@@ -15,10 +15,29 @@
 		</ul>
 	</div>
 	<div class = "message">
-		<div id="sms">
+		<?php
+		if(isset($_GET["user"])){
+		$sql = "SELECT * FROM users WHERE id_User=" .$_GET["user"]; 
+		$result = mysqli_query($connect, $sql);//оправляем запрос
+		$col_users = mysqli_num_rows($result);//получаем результат совпадений
+			//извлекаем результат в запроса
+			$user = mysqli_fetch_assoc($result);
+		?>
+		<div class="check-user">
+		<div class="avatar">
+		<img src=" <?php echo $user["photo"]; ?>">
+		<h2>Сhat with <?php echo $user["name"]; ?></h2>
+		</div>
+		</div>
+		<?php
+		}else{
+				$userid = $_POST["id_User_2"];
+		}
+		?>
+		<div class="sms">
 		    <?php
 		     //include - подключить файл, а имеено список сообщений
-		   include "addsms.php";
+		   include "smski.php";
 		    ?>
 		</div> 
 		
@@ -28,7 +47,7 @@
 		?>    
 			<input type = "hidden" name="id_User_2" value="<?php echo $_GET["user"]; ?>">
 			<input type = "hidden" name="id_User" value="<?php echo $_COOKIE["id"]; ?>">
-			<textarea name="text"></textarea>
+			<textarea style="font-family: Bradley Hand, cursive;"name="text"></textarea>
 			<button type="submit" id="send_sms" >
 			<img src="../images/send.png">	
 			</button>

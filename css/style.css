@@ -160,34 +160,6 @@ button  {
 
 
 /*==================
-Модельное окно с контактами
-===================*/
-.modal.contact{
-    position: absolute;
-    overflow-y: auto;
-    width: 100px;
-}
-
-.modal.contact ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 250px;
-}
-.modal.contact ul li {
-    top:30px;
-   position: relative;
-    padding: 0px;
-    
-}
-.modal.contact ul li a{
-    float: right;
-    padding: 0px;
-    top:-40px;
-}
-
-
-/*==================
 поиск
 ===================*/
 .search {
@@ -300,18 +272,27 @@ button  {
 }
 .check-user {
     position: fixed;
-    top:80px;
+    top:65px;
     width:40%;
-    height:6%;
-    background-color:rgba(128, 168, 200);
+    height:90px;
+    background: #94A4F1;
+    background: -moz-radial-gradient(center, ellipse cover, #94A4F1, #C2CBF5);
+    background: -webkit-linear-gradient(top, #94A4F1, #C2CBF5);
+    background: -o-linear-gradient(top, #94A4F1, #C2CBF5);
+    background: -ms-linear-gradient(top, #94A4F1, #C2CBF5);
+
+border: 1px solid #333;
     font-family: Bradley Hand, cursive;
+}
+.check-user .avatar{
+    text-align: center;
 }
 /*==================
 Стиль скроллбара
 ===================*/
 .modal.contact::-webkit-scrollbar-track,
 .list::-webkit-scrollbar-track,
-#sms::-webkit-scrollbar-track,
+.sms::-webkit-scrollbar-track,
 .modal .content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
@@ -319,14 +300,14 @@ button  {
 }
 .modal.contact::-webkit-scrollbar,
 .list::-webkit-scrollbar,
-#sms::-webkit-scrollbar,
+.sms::-webkit-scrollbar,
 .modal .content::-webkit-scrollbar {
     width: 10px;
     background-color: #F5F5F5;
 }
 .modal.contact::-webkit-scrollbar-thumb,
 .list::-webkit-scrollbar-thumb,
-#sms::-webkit-scrollbar-thumb,
+.sms::-webkit-scrollbar-thumb,
 .modal .content::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-image: -webkit-gradient(linear,
@@ -352,44 +333,47 @@ button  {
     background-image:linear-gradient(45deg,#2e3192,#1bffff);
 }
 
-#sms {
+.sms {
 	width: 100%;
     height: 90%;
     overflow-y: auto;
+    position: relative;
+    top:10%;
 }
 
-#sms ul {
+.sms ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#sms ul li {
+.sms ul li {
     position: relative;
     padding: 10px;
+    font-family: Bradley Hand, cursive;
 }
 
-#sms ul .avatar {
+.sms ul .avatar {
     width: 60px;
     height: 60px;
     float: left;
     margin-right: 10px;
 }
 
-#sms ul .avatar img {
+.sms ul .avatar img {
     width: 100%;
     height: 100%;
 }
 
-#sms ul h2,
-#sms ul p {
+.sms ul h2,
+.sms ul p {
     margin: 0;
     max-width: 400px;
     text-overflow: ellipsis;
     word-wrap: break-word;
 }
 
-#sms ul .time {
+.sms ul .time {
     position: absolute;
     top: 10px;
     right: 10px;

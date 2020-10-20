@@ -1,8 +1,7 @@
 <?php
 include "configs/db.php";
-include "configs/Settings.php";
 //создаем запрос к базе данных и проверяем чтобы id пользователя в базе небыл равен вошедшему
-$sql = "SELECT * FROM users WHERE id_User!=" . $user_id;
+$sql = "SELECT * FROM users WHERE id_User!=" . $_COOKIE["id"];
 $result = mysqli_query($connect, $sql);//выполняем щапрос
 $col_users = mysqli_num_rows($result);//получаем число результатов
 ?>
@@ -24,13 +23,11 @@ $a = false;
 				</div>
 				<h2><?php echo $user["name"]; ?> </h2>
 			    </a>
-
 			 <?php
 			$a = true;  
 		}
 		$i++;
-	}
-		
+	}	
 	if ($a == false) {
 		echo"<h2>". "Совпадений по поиску не найдено" . "</h2>";
 	}

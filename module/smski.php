@@ -5,28 +5,15 @@ if (isset($_GET["user"]) && isset($_COOKIE["id"]) || isset($_POST["id_User_2"]))
 $userid = null;
 
 if(isset($_GET["user"])){
-		$userid = $_GET["user"];
-		$sql = "SELECT * FROM users WHERE id_User=" . $userid; 
-		$result = mysqli_query($connect, $sql);//оправляем запрос
-		$col_users = mysqli_num_rows($result);//получаем результат совпадений
-			//извлекаем результат в запроса
-			$user = mysqli_fetch_assoc($result);
-		?>
-		<div class="check-user">
-		<div class="avatar">
-		<img src=" <?php echo $user["photo"]; ?>">
-		</div>
-		<h2>Сhat with <?php echo $user["name"]; ?></h2>
-		</div>
-		<?php
+	$userid = $_GET["user"];
 }else{
-		$userid = $_POST["id_User_2"];
+	$userid = $_POST["id_User_2"];
 }
 // получаем все смс которые были отправлены пользователю
 $sql = "SELECT * FROM smski" .  // выбераем все сообщения
  	" WHERE (id_User_2 =" . $userid .   //где id отправляемому польователю = $_GET["user"]
-	 " AND id_User=" . $user_id . ")" . // и отправлено от пользователя с id = 1
-	 " OR (id_User_2=" . $user_id . " AND id_User =" . $userid . ")"; //
+	 " AND id_User=" . $_COOKIE["id"] . ")" . // и отправлено от пользователя с id = 1
+	 " OR (id_User_2=" . $_COOKIE["id"] . " AND id_User =" . $userid . ")"; //
 
 $result = mysqli_query($connect, $sql);
 $col_smski = mysqli_num_rows($result);
@@ -39,7 +26,7 @@ $col_smski = mysqli_num_rows($result);
 					<img src="images/user1.png">
 					</div>
 					<?php
-						//получаем sql запрос для вывода имени пользователя для с
+						//создаем запрос выбираем имя пользователя с таблицы юзер где id пользователя равно id того кто отправил смс
 						$sql = "SELECT  name FROM users WHERE id_User=" . $sms["id_User"];
 						//выполняем запрос
 						$user = mysqli_query($connect, $sql);

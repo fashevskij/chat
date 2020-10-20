@@ -1,11 +1,12 @@
 <?php
-
-$sql = "SELECT * FROM users WHERE id_User!=" . $user_id;
+//создаем запрос где выбераем всех пользователей кроме авторизированного
+$sql = "SELECT * FROM users WHERE id_User!=" . $_COOKIE["id"];
 // Выполнить sql запрос в базе данных
 $result = mysqli_query($connect, $sql);
+//получаем все варианты 
 $col_users = mysqli_num_rows($result);
 
-
+//если существует авторизированный пользователь
 if (isset($_COOKIE["id"])){
 		$i = 0;
 		//пока в переменная и меньше чем количество пользователь то мы делаем вывод инфы
@@ -21,9 +22,9 @@ if (isset($_COOKIE["id"])){
 				<h2><?php echo $user["name"]; ?> </h2>
 				<?php
 				if($user["status"] == 1){
-					?><h5>online</h5><?php
+					?><h5 style="color: yellow;">online</h5><?php
 				}else{
-					?><h5>offline</h5><?php
+					?><h5 style="color: red;">offline</h5><?php
 				}
 				?>
 				</a>
@@ -31,8 +32,9 @@ if (isset($_COOKIE["id"])){
 			 <?php
 			$i++;	
 			} 
+			
 		}else if (isset($_POST["search-text"])){
-			include "../search_text.php";
+			include "../search_text.php";//подключаем поле с поиском юзеров
 		}
 	    ?>
 	

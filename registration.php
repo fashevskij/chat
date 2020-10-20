@@ -23,6 +23,11 @@ include "configs/db.php";
 			<!--type="sumbit - чтобы данные отправлялись на сервер-->
 			<button type="submit" name="registration">Регистрация</button>
 			</p>
+			<select>
+			<option value="0"disabled >Выберите пол</option>
+			<option value="1">мужчина</option>
+			<option value="2">женщина</option>
+			</select>
 		</form>	
 	</div>
 </div>

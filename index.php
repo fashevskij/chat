@@ -1,6 +1,5 @@
 <?php
 include "configs/db.php";
-include "configs/settings.php";
 include "login.php";
 include "registration.php";
 ?>
@@ -23,14 +22,12 @@ include "registration.php";
 					$result = mysqli_query($connect, $sql);//выполняем запрос к базе данных
 					$user = mysqli_fetch_assoc($result);//
 					?>
-					<a href="#" id="open-contact">Friends</a>
 					<a href="#" id="settings">Settings</a>
 					
-					<a href="exit.php"><?php echo $user["name"];?> Log out</a>
+					<a href="exit.php"><p style="color:yellow"><?php echo $user["name"];?> Log out</p> </a>
 					<?php	//кнопка с очисткой кук и перенаправлением на главную при выходе				
-					include "module/contact.php";
 					include "module/content.php";
-					
+					include "settings.php";
 				}else{
 					?>
 						<a href="#" id="account"><h2>Authorization</h2></a>	
@@ -43,7 +40,7 @@ include "registration.php";
 </body>
 <script src="js/modal_close_btn.js"></script>
 <script src="js/authorization.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/friends_operation.js"></script>
+<script src="js/settings.js"></script>
 <script src="js/sms.js"></script>
+<script src="js/searchText.js"></script>
 </html>
