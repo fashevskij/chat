@@ -32,21 +32,21 @@ include "configs/db.php";
 //Проверяем если была нажата кнопка изменить, пароли не пусты
 if(isset($_POST["settings"]) && $_POST["password2"] != "" && $_POST["password1"] != "" ){
 	//проверяем что пароли должны совпадать между собой
-	if ($_POST["password1"] = $_POST["password2"]){
+	if ($_POST["password1"] == $_POST["password2"]){
 		//создаем запрос к базе данных где пароль будет равен введенному а польхователь тот который онлайн
 	$sql = "UPDATE `users` SET `password` = '" . $_POST["password1"] . "' WHERE `id_User` = '" . $_COOKIE["id"] . "'";
 	//отправляем заппрос
 	mysqli_query($connect, $sql);
-	echo"пароль успешно изменен";
+	echo"пароль успешно изменен! ";
 	}else{
-	echo "пароли не совпадают";
+	echo "пароли не совпадают! ";
 	}
 }
 
 if(isset($_POST["settings"]) && $_POST["name"] != ""){
 	$sql = "UPDATE `users` SET `name` = '" . $_POST["name"] . "' WHERE `id_User` = '" . $_COOKIE["id"] . "'";
 	mysqli_query($connect, $sql);
-	echo"имя успешно изменено";
+	echo"имя успешно изменено! ";
 }
 
 

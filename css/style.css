@@ -271,10 +271,12 @@ button  {
     top:2%;
 }
 .check-user {
-    position: fixed;
-    top:65px;
-    width:40%;
-    height:90px;
+    position: absolute;
+    text-align: center;
+    height:30px;
+    top: 0px;
+    left:0px;
+    width: -webkit-fill-available;
     background: #94A4F1;
     background: -moz-radial-gradient(center, ellipse cover, #94A4F1, #C2CBF5);
     background: -webkit-linear-gradient(top, #94A4F1, #C2CBF5);
@@ -284,13 +286,11 @@ button  {
 border: 1px solid #333;
     font-family: Bradley Hand, cursive;
 }
-.check-user .avatar{
-    text-align: center;
-}
+
 /*==================
 Стиль скроллбара
 ===================*/
-.modal.contact::-webkit-scrollbar-track,
+
 .list::-webkit-scrollbar-track,
 .sms::-webkit-scrollbar-track,
 .modal .content::-webkit-scrollbar-track {
@@ -298,14 +298,14 @@ border: 1px solid #333;
     background-color: #F5F5F5;
     border-radius: 10px;
 }
-.modal.contact::-webkit-scrollbar,
+
 .list::-webkit-scrollbar,
 .sms::-webkit-scrollbar,
 .modal .content::-webkit-scrollbar {
     width: 10px;
     background-color: #F5F5F5;
 }
-.modal.contact::-webkit-scrollbar-thumb,
+
 .list::-webkit-scrollbar-thumb,
 .sms::-webkit-scrollbar-thumb,
 .modal .content::-webkit-scrollbar-thumb {
@@ -327,7 +327,7 @@ border: 1px solid #333;
     height: 80%;
     left: 42%;
     top: 10%;
-   padding: 30px;
+    padding: 30px;
     width: 40%;
     background-image:-webkit-linear-gradient(45deg,#2e3192,#1bffff);
     background-image:linear-gradient(45deg,#2e3192,#1bffff);
@@ -338,13 +338,13 @@ border: 1px solid #333;
     height: 90%;
     overflow-y: auto;
     position: relative;
-    top:10%;
+    top:0%;
 }
 
 .sms ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 30px;
 }
 
 .sms ul li {

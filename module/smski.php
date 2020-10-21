@@ -33,9 +33,9 @@ $col_smski = mysqli_num_rows($result);
 						//записываем  в переменную массив с данными пользователя
 						$user = mysqli_fetch_assoc($user);
 					?>
-					<h2><?php echo $user["name"]; ?></h2>
+					<h2 style="color:burlywood"><?php echo $user["name"]; ?></h2>
 					<p><?php echo $sms["text"]; ?></p>
-					<div class="time"><?php echo $sms["time"]; ?></div>
+					<div class="time" style="color:white"><?php echo $sms["time"]; ?></div>
 				</li>
 			<?php	
 		    $i++;

@@ -24,17 +24,12 @@
 			$user = mysqli_fetch_assoc($result);
 		?>
 		<div class="check-user">
-		<div class="avatar">
-		<img src=" <?php echo $user["photo"]; ?>">
 		<h2>Сhat with <?php echo $user["name"]; ?></h2>
 		</div>
-		</div>
 		<?php
-		}else{
-				$userid = $_POST["id_User_2"];
 		}
 		?>
-		<div class="sms">
+		<div class="sms" is="sms">
 		    <?php
 		     //include - подключить файл, а имеено список сообщений
 		   include "smski.php";
