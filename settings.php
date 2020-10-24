@@ -1,29 +1,28 @@
 <?php
 include "configs/db.php";
-
 ?>
 
 <div class="modal "id="settings-modal">
 		<div class="close">X</div>
-        <h2>Настройки</h2>
+        <h2>Settings</h2>
     <div class="positions">
 		<form method="POST">
 			<p>
-				введите новое имя: <br/>
+				New name: <br/>
 			<input type="text" name="name">
 			</p>
 			<p>
 			<p>
-				введите новый пароль: <br/>
+				New password: <br/>
 			<input type="password" name="password1">
 			</p>
 			<p>
-				введите еще раз новый пароль: <br/>
+				Repeat new password: <br/>
 			<input type="password" name="password2">
 			</p>
 			<p>
 			<!--type="sumbit - чтобы данные отправлялись на сервер-->
-			<button type="submit" name="settings">изменить</button>
+			<button type="submit" name="settings">Change</button>
 			</p>
 		</form>	
 	</div>
@@ -42,12 +41,12 @@ if(isset($_POST["settings"]) && $_POST["password2"] != "" && $_POST["password1"]
 	echo "пароли не совпадают! ";
 	}
 }
-
+//проверяем если кнопка была нажата и именя пользователя не пустое
 if(isset($_POST["settings"]) && $_POST["name"] != ""){
+	//создаем зпрос к бд и говорим что нужно обновить данные имени пользователя где id вошедшего пользолвателя в куках равно id в базе данных
 	$sql = "UPDATE `users` SET `name` = '" . $_POST["name"] . "' WHERE `id_User` = '" . $_COOKIE["id"] . "'";
-	mysqli_query($connect, $sql);
+	mysqli_query($connect, $sql);//выполняем запрос
 	echo"имя успешно изменено! ";
 }
-
 
 ?>

@@ -10,13 +10,13 @@ body {
     width: 100%;
 }
 
-
 .home {
-  height: 100%;
-  width: 100%;
-  background-image: url("../images/pngwing.com (1).png");
-  animation: scroll linear 18s infinite;
-  -webkit-animation: scroll linear 1000s infinite;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/pngwing.com (1).png");
+    animation: scroll linear 18s infinite;
+    -webkit-animation: scroll linear 1000s infinite;
 }
 
 @keyframes scroll {
@@ -65,7 +65,6 @@ body {
     font-family: Bradley Hand, cursive;
 }
 
-
 .menu {
     float: right;
     height: 100%;
@@ -80,16 +79,12 @@ button  {
     text-decoration: none;
     padding: .5em 2em;
     outline: none;
-   
     border-style: solid none;
     border-color: #33fdd1 rgb(189, 36, 36) #6894c5;
     border-radius: 6px;
     background: linear-gradient(#0febf3, #16b3e3) #16dce3de;
     transition: 0.2s;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+
 }
 .menu a:hover { background: rgba(255,255,255,.2); }
 .menu a:active { background: rgb(130, 171, 199); }
@@ -98,7 +93,6 @@ button  {
     background: #65ddfbc7;
 }
 .menu a{
-   
     top:20%;
 }
 
@@ -108,6 +102,7 @@ button  {
 .modal {
     display: none;
     position:fixed;
+    z-index: 1;
     left:5%;
     top:10%;
     width:270px;
@@ -163,11 +158,11 @@ button  {
 поиск
 ===================*/
 .search {
-    position: absolute;
+    position: fixed;
     height: 30px;
     padding: 10px;
     width: 13%;
-    top: 8%;
+    top: 10%;
     left: 30%;
     
 }
@@ -209,11 +204,11 @@ button  {
 ===================*/
 .list {
     position: absolute;
-    top: 13%;
+    top: 15%;
     left:30%;
     width: 12%;
     background:white;
-    height: calc(90% - 50px);
+    height: calc(88% - 50px);
     overflow-y: auto;
     background-color:rgba(128, 128, 128, 0.274);
 }
@@ -229,17 +224,15 @@ button  {
     padding: 5px;
     position: relative;
     width: calc(100%-20px);
- 
-    
 }
+
 .list ul li a {
-  text-decoration: none;
-  color: green;
+    text-decoration: none;
+    color: green;
     width: 140px;
     height: 50px;
 }
 .list ul .avatar {
-    
     left:10px;
     width: 60px;
     height: 60px;
@@ -294,7 +287,7 @@ border: 1px solid #333;
 .list::-webkit-scrollbar-track,
 .sms::-webkit-scrollbar-track,
 .modal .content::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   
     background-color: #F5F5F5;
     border-radius: 10px;
 }
@@ -392,10 +385,10 @@ border: 1px solid #333;
     border: 0;
     outline: none;
     background: none;
-    width: 15%;
-    height: 100%;
+    width: 100px;
+    height: 50px;
     cursor: pointer;
-    left:90%;
+    left:85%;
     top:25%;
 }
 
@@ -411,7 +404,127 @@ border: 1px solid #333;
 
 .form textarea {
     position: absolute;
-	width: 80%;
-    height: 8%;
+	width: 75%;
+    height: 80px;
     resize: none;
+}
+/*Делаем адаптивность чата под разные размеры мониторов*/
+
+@media screen and (max-device-width: 1600px) {
+    .message {
+        height: 70%;
+        top: 7%;
+        width: 45%; 
+    }
+
+    .search {
+        width: 19%;
+        top: 7%;
+        left: 25%;
+    }
+    
+    .list {
+        top: 11%;
+        left: 25%;
+        width: 17%;
+        height: calc(77% - 50px);
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    .message {
+        height: 620px;;
+        top: 8%;
+        width: 45%; 
+    }
+
+    .form textarea {
+        height: 60px;
+    }
+
+    .search {
+        width: 24%;
+        top: 8%;
+        left: 20%;
+
+    }.list {
+        top: 12%;
+        left: 20%;
+        width: 23%;
+        height: calc(630px);
+    }
+}
+
+@media screen and (max-device-width: 812px) {
+    .message {
+    height:768px;
+    top: 13%;
+    width: 47%;
+    }
+
+    .form textarea {
+    height: 40px;
+    }
+    
+    .search {
+    width: 24%;
+    top: 13%;
+    left: 20%;
+    }
+    
+    .list {
+    top: 17%;
+    left: 20%;
+    width: 23%;
+    height: calc(790px);
+    }
+}
+
+@media screen and (max-device-width: 415px) {
+    .message {
+        height: 1000px;
+        top: 9%;
+        width: 55%;
+        left:35%;
+    }
+
+    .form textarea {
+        height: 70px;
+    }
+        
+    .search {
+        width: 27%;
+        top: 9%;
+        left: 12%;
+    }
+
+    .list {
+        top: 12%;
+        left: 12%;
+        width: 23%;
+        height: calc(1030px);
+    }
+}
+
+@media screen and (max-device-height: 420px){
+    .message {
+        height: 300px;
+        top: 12%;
+        width: 55%;
+        left: 35%;
+    }
+    .form textarea {
+        height: 40px;
+    }
+    .search {
+        width: 24%;
+        top: 12%;
+        left: 14%;
+    }
+    .list {
+        top: 22%;
+        left: 12%;
+        width: 23%;
+        height: calc(320px);
+    }
 }

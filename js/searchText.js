@@ -1,17 +1,21 @@
 //блок поиска текста по имени пользователя без перезагрузки страницы
-var search = document.querySelector(".search");
+let search = document.querySelector(".search"),
+//получаем поле для воода текста
+	text = search.querySelector("input"),
+	//получаем блок с пользователями
+	user = document.querySelector(".list");
+//вешаем событие на поиск текста
 search.onsubmit = function(event){
 	//отмена действия по умолчанию
 	event.preventDefault();
-
-var text = search.querySelector("input");
-
-var data = "search-text=" + text.value + "&send=1" ;
-
-var aj = new XMLHttpRequest();
-	aj.open("POST", "search_text.php", false);
-	aj.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	aj.send(data);
-	var user = document.querySelector(".list");
+	//текст + поиск
+	let data = "search-text=" + text.value + "&send=1" ;
+	//созадем обьект XMLHttpRequest();
+	let ajax = new XMLHttpRequest();
+	//создаем запрос
+	ajax.open("POST", "search_text.php", false);
+	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	ajax.send(data);//отправляем запрос
+	//обновляем блок с контактами
 	user.innerHTML = aj.response;
 };
