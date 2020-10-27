@@ -1,5 +1,5 @@
 <?php
-include "configs/db.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 //создаем запрос к базе данных и проверяем чтобы id пользователя в базе небыл равен вошедшему
 $sql = "SELECT * FROM users WHERE id_User!=" . $_COOKIE["id"];
 $result = mysqli_query($connect, $sql); //выполняем щапрос
@@ -16,20 +16,20 @@ while ($i < $count_users) {
 	$search = stripos($user["name"], $_POST["search-text"]);
 	//если результат не равне лжи то вывидем результат поиска запроса
 	if ($search !== false) {
-	?>
+?>
 		<a class="get-search" href="index.php?user= <?php echo $user["id_User"]; ?>">
 			<div class="avatar">
 				<img src=" <?php echo $user["photo"]; ?>">
 			</div>
 			<h2><?php echo $user["name"]; ?> </h2>
 		</a>
-		<?php
+<?php
 		$a = true;
 	}
 	$i++;
 }
 if ($a == false) {
-	echo "<h2>" . "Совпадений по поиску не найдено" . "</h2>";
+	echo "<h2>" . "No name search matches found" . "</h2>";
 }
 
 ?>

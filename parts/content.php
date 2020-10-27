@@ -8,7 +8,7 @@
 	<ul>
 		<?php
 		//include - подключить файл, а имеено список контактов 
-		include "list.php";
+		include $_SERVER['DOCUMENT_ROOT'] . "/parts/list.php";
 		?>
 	</ul>
 </div>
@@ -28,7 +28,7 @@
 		<div class="sms" is="sms">
 			<?php
 			//include - подключить файл, а имеено список сообщений
-			include "smski.php";
+			include $_SERVER['DOCUMENT_ROOT'] . "/parts/message.php";
 			?>
 		</div>
 

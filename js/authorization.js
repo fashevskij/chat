@@ -1,7 +1,7 @@
 //получаем кнопку и модал окно авторизации по id
 let btnOpenAccount = document.querySelector("#account"),
- 	accountModal = document.querySelector("#authorization"),
-//получаем кнопку и модал окно регистрации по id
+	accountModal = document.querySelector("#authorization"),
+	//получаем кнопку и модал окно регистрации по id
 	btnOpenRgistr = document.querySelector("#registr"),
 	registrationModal = document.querySelector('#registration');
 //событие для открытия модального окна авторизации при клике на кнопку авторизация
@@ -19,5 +19,3 @@ btnOpenRgistr.addEventListener('click', function () {
 	registrationModal.style.height = "300px";
 	close(1, registrationModal);
 });
-
-

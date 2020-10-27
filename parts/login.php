@@ -1,5 +1,5 @@
 <?php
-include "configs/db.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
 ?>
 <div class="modal" id="authorization">
 	<div class="close">X</div>
@@ -42,7 +42,7 @@ if (
 		$status = "UPDATE `users` SET `status` = '1' WHERE `id_User` =" . $user["id_User"];
 		mysqli_query($connect, $status); //выполняем запрос
 	} else { //если нет то
-		echo "<h2>Логин или пароль не верны</h2>";
+		echo "<h2>Login or password is not correct</h2>";
 		header("Location: /");
 	}
 }

@@ -22,17 +22,21 @@ if (isset($_COOKIE["id"])) {
 				<h2><?php echo $user["name"]; ?> </h2>
 				<?php
 				if ($user["status"] == 1) {
-				?><h5 style="color: yellow;">online</h5><?php
+				?>
+					<h5 style="color: yellow;">online</h5>
+				<?php
 				} else {
-					?><h5 style="color: red;">offline</h5><?php
+				?>
+					<h5 style="color: red;">offline</h5>
+				<?php
 				}
-					?>
+				?>
 			</a>
 		</li>
 <?php
 		$i++;
 	}
 } else if (isset($_POST["search-text"])) {
-	include "../search_text.php"; //подключаем поле с поиском юзеров
+	include $_SERVER['DOCUMENT_ROOT'] . "/modules/search_text.php"; //подключаем поле с поиском юзеров
 }
 ?>
