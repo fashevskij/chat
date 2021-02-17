@@ -6,7 +6,7 @@ let form = document.querySelector(".form"), //получаем форму отп
     sms = document.querySelector(".sms"); //получаем блок с сообщениями
 //опускаем скролл в самый низ при клике на пользователя
 sms.scrollTop = sms.scrollHeight;
-//событие на отправку формы 
+//событие на отправку формы
 form.onsubmit = function (event) {
     //отмена действия по умолчанию
     event.preventDefault();
@@ -34,7 +34,7 @@ form.onsubmit = function (event) {
 function reload() {
     //Создаем обьект XMLHttpRequest
     var ajax = new XMLHttpRequest();
-    //помещаем только сообщения уже отправленые 
+    //помещаем только сообщения уже отправленые
     var data =
         "&id_User=" + user.value +
         "&id_User_2=" + user_2.value;

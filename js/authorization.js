@@ -16,6 +16,6 @@ btnOpenRgistr.addEventListener('click', function () {
 	accountModal.style.display = "none";
 	registrationModal.style.display = "block";
 	//Увеличим временно высоту модального окна чтобы все поместилось
-	registrationModal.style.height = "300px";
+	registrationModal.style.height = "365px";
 	close(1, registrationModal);
 });

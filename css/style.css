@@ -1,22 +1,22 @@
 html {
-    height: 100%;
-    width: 100%;
+  height: 99%;
+  width: 99%;
 }
 
 body {
-    
-    background-image: url("../images/social-media-networking-chatting-and-texting_1200-504.jpg");
-    height: 90%;
-    width: 100%;
+
+  background-image: url("../images/social-media-networking-chatting-and-texting_1200-504.jpg");
+  height: 90%;
+  width: 99%;
 }
 
 .home {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url("../images/pngwing.com (1).png");
-    animation: scroll linear 18s infinite;
-    -webkit-animation: scroll linear 1000s infinite;
+  position: absolute;
+  height: 99%;
+  width: 99%;
+  background-image: url("../images/pngwing.com (1).png");
+  animation: scroll linear 18s infinite;
+  -webkit-animation: scroll linear 1000s infinite;
 }
 
 @keyframes scroll {
@@ -27,130 +27,149 @@ body {
     background-position: 10000% 0;
   }
 }
+
 /*==================
 Шапка чата
 ===================*/
 
 .up {
-    width: 100%;
-    height: 80px;
-    background: #0000000a;
-    background-color:rgba(255, 255, 0, 0.226);
+  width: 100%;
+  height: 80px;
+  background: #0000000a;
+  background-color: rgba(255, 255, 0, 0.226);
 }
 
 .logo {
-    width: 100px;
-    height: 100%;
-    position: relative;
-    float: left;
+  width: 100px;
+  height: 100%;
+  position: relative;
+  float: left;
 }
 
 .logo img {
-    width: 80%;
-    position: absolute;
-    top: 0px;
-    left: 10px;
+  width: 80%;
+  position: absolute;
+  top: 0px;
+  left: 10px;
 }
 
 .logo span {
-    font-size: 50px;
-    position: absolute;
-    top: 10px;
-    left: 120px;
+  font-size: 50px;
+  position: absolute;
+  top: 10px;
+  left: 120px;
 }
-.logo span b{
-    font-family: Bradley Hand, cursive;
+
+.logo span b {
+  font-family: Bradley Hand, cursive;
 }
-.logo span i{
-    font-family: Bradley Hand, cursive;
+
+.logo span i {
+  font-family: Bradley Hand, cursive;
 }
 
 .menu {
-    float: right;
-    height: 100%;
+  float: right;
+  height: 100%;
 }
 
 .menu a,
-button  {
-    font-family: Bradley Hand, cursive;
-    position: relative;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: .5em 2em;
-    outline: none;
-    border-style: solid none;
-    border-color: #33fdd1 rgb(189, 36, 36) #6894c5;
-    border-radius: 6px;
-    background: linear-gradient(#0febf3, #16b3e3) #16dce3de;
-    transition: 0.2s;
+button {
+  font-family: Bradley Hand, cursive;
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-style: solid none;
+  border-color: #33fdd1 rgb(189, 36, 36) #6894c5;
+  border-radius: 6px;
+  background: linear-gradient(#0febf3, #16b3e3) #16dce3de;
+  transition: 0.2s;
 
 }
-.menu a:hover { background: rgba(255,255,255,.2); }
-.menu a:active { background: rgb(130, 171, 199); }
 
 .menu a:hover {
-    background: #65ddfbc7;
+  background: rgba(255, 255, 255, .2);
 }
-.menu a{
-    top:20%;
+
+.menu a:active {
+  background: rgb(130, 171, 199);
+}
+
+.menu a:hover {
+  background: #65ddfbc7;
+}
+
+.menu a {
+  text-align: center;
+  top: 20%;
+  width: 133px;
+  height: 30px;
+
 }
 
 /*==================
 Стили для модальных окон
 ===================*/
 .modal {
-    display: none;
-    position:fixed;
-    z-index: 1;
-    left:5%;
-    top:10%;
-    width:270px;
-    height:220px;
-    background: rgba(78, 185, 228, 0.856);
-    border-radius:10%;
-    -webkit-border-radius:10%;
-    -moz-border-radius:10%;
-    -ms-border-radius:10%;
-    -o-border-radius:10%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 5%;
+  top: 10%;
+  width: 270px;
+  height: 220px;
+  background: rgba(78, 185, 228, 0.856);
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
 }
-.modal h2{
-    font-family: Bradley Hand, cursive;
-    position: absolute;
-    left:15%;
-    top: 8%;
-}    
-.modal .positions{
-    font-family: Bradley Hand, cursive;
-    padding: 15px;
-    position: absolute;
-    top:20%;
-    left:10%;
-    width: 200px;
-   
+
+.modal h2 {
+  font-family: Bradley Hand, cursive;
+  position: absolute;
+  left: 15%;
+  top: -5%;
 }
-.modal .positions button{
-    cursor: pointer;
-    color:rgb(46, 123, 126);
-    left: 0%;
-    padding:10px;
-    margin:5px;
-    margin-left: 2px;
+
+.modal .positions {
+  font-family: Bradley Hand, cursive;
+  padding: 15px;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  width: 200px;
+
 }
+
+.modal .positions button {
+  cursor: pointer;
+  color: rgb(46, 123, 126);
+  left: 0%;
+  padding: 10px;
+  margin: 5px;
+  margin-left: 2px;
+}
+
 .modal .close {
-    position:absolute;
-    right:20px;
-    top:20px;
-    transition: .5s;
-    cursor: pointer;;
-    z-index: 1;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: .5s;
+  cursor: pointer;;
+  z-index: 1;
 }
-.modal .close:hover{
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
+
+.modal .close:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 
 
@@ -158,127 +177,144 @@ button  {
 поиск
 ===================*/
 .search {
-    position: fixed;
-    height: 30px;
-    padding: 10px;
-    width: 13%;
-    top: 10%;
-    left: 30%;
-    
+  position: fixed;
+  height: 30px;
+  padding: 10px;
+  width: 13%;
+  top: 10%;
+  left: 30%;
+
 }
 
 .search input {
-    background: pink;
-    border: none;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    float: left;
-    margin-right: 10px;
-    width: calc(75% - 30px);
-    outline: none;
-    padding: 0 10px;
+  background: pink;
+  border: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  margin-right: 10px;
+  width: calc(75% - 30px);
+  outline: none;
+  padding: 0 10px;
 }
 
 .search button {
-    width: 40px;
-    height: 30px;
-    border: none;
-    background: pink;
-    cursor: pointer;
-    outline: none;
-    padding: 0;
+  width: 40px;
+  height: 30px;
+  border: none;
+  background: pink;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
 }
 
 .search button:active {
-    background: yellow;
+  background: yellow;
 }
 
 .search button img {
-    width: 100%;
-    height: 100%
+  width: 100%;
+  height: 100%
 }
 
 /*==================
 Список контактов
 ===================*/
 .list {
-    position: absolute;
-    top: 15%;
-    left:30%;
-    width: 12%;
-    background:white;
-    height: calc(88% - 50px);
-    overflow-y: auto;
-    background-color:rgba(128, 128, 128, 0.274);
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 12%;
+  background: white;
+  height: calc(88% - 50px);
+  overflow-y: auto;
+  background-color: rgba(128, 128, 128, 0.274);
 }
 
 .list ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .list ul li {
-    padding: 5px;
-    position: relative;
-    width: calc(100%-20px);
+  padding: 5px;
+  position: relative;
+  width: calc(100% - 20px);
 }
 
-.list ul li a {
-    text-decoration: none;
-    color: green;
-    width: 140px;
-    height: 50px;
+.list ul li a{
+  text-decoration: none;
+  color: green;
+  width: 140px;
+  height: 50px;
 }
+
 .list ul .avatar {
-    left:10px;
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin-right: 10px;
+  left: 0px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  /* float: left; */
+  margin: 5px;
+  top: 0;
 }
 
 .list ul .avatar img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-.list ul li h2{
-    position: absolute;
-    right: 5px;
-    top:0;
+.list ul li h2 {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  margin: 0;
 }
 
+
+.list ul h5 {
+  color: yellow;
+  top: 0;
+  position: absolute;
+  margin: 0;
+  right: 10px;
+}
 
 .avatar img {
-    width: 50px;
-    left: 10px;
+  width: 50px;
+  left: 10px;
 }
-.list .get-search{
-    width: 80%;
-    position: absolute;
-    padding:2px;
-    left:2%;
-    top:2%;
-}
-.check-user {
-    position: absolute;
-    text-align: center;
-    height:30px;
-    top: 0px;
-    left:0px;
-    width: -webkit-fill-available;
-    background: #94A4F1;
-    background: -moz-radial-gradient(center, ellipse cover, #94A4F1, #C2CBF5);
-    background: -webkit-linear-gradient(top, #94A4F1, #C2CBF5);
-    background: -o-linear-gradient(top, #94A4F1, #C2CBF5);
-    background: -ms-linear-gradient(top, #94A4F1, #C2CBF5);
 
-border: 1px solid #333;
-    font-family: Bradley Hand, cursive;
+.list .get-search {
+  width: 80%;
+  position: absolute;
+  padding: 2px;
+  left: 2%;
+  top: 2%;
+  height: 80px;
+  margin: 10px;
 }
+
+.check-user {
+  text-align: center;
+  height: 10px;
+  padding: 10px;
+  line-height: 0;
+  left: 0px;
+  width: -webkit-fill-available;
+  background: #94A4F1;
+  background: -moz-radial-gradient(center, ellipse cover, #94A4F1, #C2CBF5);
+  background: -webkit-linear-gradient(top, #94A4F1, #C2CBF5);
+  background: -o-linear-gradient(top, #94A4F1, #C2CBF5);
+  background: -ms-linear-gradient(top, #94A4F1, #C2CBF5);
+  border: 1px solid #333;
+  font-family: Bradley Hand, cursive;
+}
+
+
 
 /*==================
 Стиль скроллбара
@@ -287,244 +323,264 @@ border: 1px solid #333;
 .list::-webkit-scrollbar-track,
 .sms::-webkit-scrollbar-track,
 .modal .content::-webkit-scrollbar-track {
-   
-    background-color: #F5F5F5;
-    border-radius: 10px;
+
+  background-color: #F5F5F5;
+  border-radius: 10px;
 }
 
 .list::-webkit-scrollbar,
 .sms::-webkit-scrollbar,
 .modal .content::-webkit-scrollbar {
-    width: 10px;
-    background-color: #F5F5F5;
+  width: 10px;
+  background-color: #F5F5F5;
 }
 
 .list::-webkit-scrollbar-thumb,
 .sms::-webkit-scrollbar-thumb,
 .modal .content::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-image: -webkit-gradient(linear,
-        left bottom,
-        left top,
-        color-stop(0.44, rgb(122, 153, 217)),
-        color-stop(0.72, rgb(73, 125, 189)),
-        color-stop(0.86, rgb(28, 58, 148)));
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear,
+  left bottom,
+  left top,
+  color-stop(0.44, rgb(122, 153, 217)),
+  color-stop(0.72, rgb(73, 125, 189)),
+  color-stop(0.86, rgb(28, 58, 148)));
 }
 
 /*==================
 стили для переписки с пользователем
 ===================*/
 .message {
-    position: absolute;
-    margin: 10px;
-    height: 80%;
-    left: 42%;
-    top: 10%;
-    padding: 30px;
-    width: 40%;
-    background-image:-webkit-linear-gradient(45deg,#2e3192,#1bffff);
-    background-image:linear-gradient(45deg,#2e3192,#1bffff);
+  position: absolute;
+  margin: 10px;
+  height: 80%;
+  left: 42%;
+  top: 10%;
+  padding: 30px;
+  width: 40%;
+  background-image: -webkit-linear-gradient(45deg, #2e3192, #1bffff);
+  background-image: linear-gradient(45deg, #2e3192, #1bffff);
 }
 
+
 .sms {
-	width: 100%;
-    height: 90%;
-    overflow-y: auto;
-    position: relative;
-    top:0%;
+  width: 100%;
+  height: 83%;
+  overflow-y: auto;
+  position: relative;
+  top: 3px;
 }
 
 .sms ul {
-    list-style: none;
-    margin: 0;
-    padding: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 30px;
 }
 
 .sms ul li {
-    position: relative;
-    padding: 10px;
-    font-family: Bradley Hand, cursive;
+  position: relative;
+  padding: 10px;
+  font-family: Bradley Hand, cursive;
 }
 
 .sms ul .avatar {
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
 }
 
 .sms ul .avatar img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .sms ul h2,
 .sms ul p {
-    margin: 0;
-    max-width: 400px;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+  margin: 0;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .sms ul .time {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 /*==================
 Стили для формы отправки сообщений
 ===================*/
-.form{
+.form {
 
-	height: calc(10% - 20px);
-    padding: 10px;
+  height: calc(10% - 20px);
+  padding: 10px;
 
 }
+
 .form button {
-    border: 0;
-    outline: none;
-    background: none;
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
-    left:85%;
-    top:25%;
+  border: 0;
+  outline: none;
+  background: none;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  left: 85%;
+  top: 25%;
 }
 
 .form button img {
-    height: 100%;
-    width: 100%;
-    
+  height: 100%;
+  width: 100%;
+
 }
 
 .form button:active {
-    background: yellow;
+  background: yellow;
 }
 
 .form textarea {
-    position: absolute;
-	width: 75%;
-    height: 80px;
-    resize: none;
+  position: absolute;
+  width: 75%;
+  height: 80px;
+  resize: none;
 }
+
 /*Делаем адаптивность чата под разные размеры мониторов*/
 
 @media screen and (max-device-width: 1600px) {
-    .message {
-        height: 70%;
-        top: 7%;
-        width: 45%; 
-    }
+  .message {
+    height: 70%;
+    top: 7%;
+    width: 45%;
+  }
 
-    .search {
-        width: 19%;
-        top: 7%;
-        left: 25%;
-    }
-    
-    .list {
-        top: 11%;
-        left: 25%;
-        width: 17%;
-        height: calc(77% - 50px);
-    }
+  .search {
+    width: 19%;
+    top: 7%;
+    left: 25%;
+  }
+
+  .list {
+    top: 11%;
+    left: 25%;
+    width: 17%;
+    height: calc(77% - 50px);
+  }
 }
 
 @media screen and (max-device-width: 1024px) {
-    .message {
-        height: 620px;;
-        top: 8%;
-        width: 45%; 
-    }
+  .message {
+    height: 580px;;
+    top: 8%;
+    width: 45%;
+  }
 
-    .form textarea {
-        height: 60px;
-    }
+  .form textarea {
+    height: 60px;
+  }
 
-    .search {
-        width: 24%;
-        top: 8%;
-        left: 20%;
-
-    }.list {
-        top: 12%;
-        left: 20%;
-        width: 23%;
-        height: calc(630px);
-    }
-}
-
-@media screen and (max-device-width: 812px) {
-    .message {
-    height:768px;
-    top: 13%;
-    width: 47%;
-    }
-
-    .form textarea {
-    height: 40px;
-    }
-    
-    .search {
+  .search {
     width: 24%;
+    top: 8%;
+    left: 20%;
+
+  }
+
+  .list {
     top: 13%;
     left: 20%;
-    }
-    
-    .list {
-    top: 17%;
+    width: 23%;
+    height: calc(600px);
+  }
+
+  .sms {
+    height: 85%;
+  }
+
+  .check-user h2 {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-device-width: 813px) {
+  .message {
+    height: 768px;
+    top: 14%;
+    width: 47%;
+  }
+
+  .form textarea {
+    height: 60px;
+  }
+  .sms {
+    height: 78%;
+  }
+  .search {
+    width: 24%;
+    top: 14%;
+    left: 20%;
+  }
+
+  .list {
+    top: 18%;
     left: 20%;
     width: 23%;
     height: calc(790px);
-    }
+  }
 }
 
 @media screen and (max-device-width: 415px) {
-    .message {
-        height: 1000px;
-        top: 9%;
-        width: 55%;
-        left:35%;
-    }
+  .message {
+    height: 1000px;
+    top: 9%;
+    width: 55%;
+    left: 35%;
+  }
 
-    .form textarea {
-        height: 70px;
-    }
-        
-    .search {
-        width: 27%;
-        top: 9%;
-        left: 12%;
-    }
+  .form textarea {
+    height: 70px;
+  }
 
-    .list {
-        top: 12%;
-        left: 12%;
-        width: 23%;
-        height: calc(1030px);
-    }
+  .search {
+    width: 27%;
+    top: 9%;
+    left: 12%;
+  }
+  .sms {
+    height: 85%;
+  }
+  .list {
+    top: 12%;
+    left: 12%;
+    width: 23%;
+    height: calc(1030px);
+  }
 }
 
-@media screen and (max-device-height: 420px){
-    .message {
-        height: 300px;
-        top: 12%;
-        width: 55%;
-        left: 35%;
-    }
-    .form textarea {
-        height: 40px;
-    }
-    .search {
-        width: 24%;
-        top: 12%;
-        left: 14%;
-    }
-    .list {
-        top: 22%;
-        left: 12%;
-        width: 23%;
-        height: calc(320px);
-    }
+@media screen and (max-device-height: 420px) {
+  .message {
+    height: 300px;
+    top: 12%;
+    width: 55%;
+    left: 35%;
+  }
+
+  .form textarea {
+    height: 40px;
+  }
+
+  .search {
+    width: 24%;
+    top: 12%;
+    left: 14%;
+  }
+
+  .list {
+    top: 22%;
+    left: 12%;
+    width: 23%;
+    height: calc(320px);
+  }
 }

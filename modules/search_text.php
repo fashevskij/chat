@@ -1,6 +1,6 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . "/configs/db.php";
-//создаем запрос к базе данных и проверяем чтобы id пользователя в базе небыл равен вошедшему
+//создаем запрос к базе данных и проверяем чтобы id пользователя в базе не был равен вошедшему
 $sql = "SELECT * FROM users WHERE id_User!=" . $_COOKIE["id"];
 $result = mysqli_query($connect, $sql); //выполняем щапрос
 $count_users = mysqli_num_rows($result); //получаем число результатов

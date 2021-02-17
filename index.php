@@ -26,16 +26,14 @@ include "parts/registration.php";
 					$user = mysqli_fetch_assoc($result); //ложим результат в переменную юсер
 				?>
 					<a href="#" id="settings">Settings</a>
-					<a href="/modules/exit.php">
-						<p style="color:yellow"><?php echo $user["name"]; ?> Log out</p>
-					</a>
+					<a href="/modules/exit.php" style="color:yellow"><?php echo $user["name"]; ?> Log out</a>
 				<?php	//кнопка с очисткой кук и перенаправлением на главную при выходе				
 					include "parts/content.php";
 					include "parts/settings.php";
 				} else {
 				?>
 					<a href="#" id="account">
-						<h2>Authorization</h2>
+						Authorization
 					</a>
 				<?php
 				}

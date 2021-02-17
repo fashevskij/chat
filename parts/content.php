@@ -1,13 +1,14 @@
-<div class="list">
+
 	<form class="search" method="POST">
 		<input type="text" name="search-text">
 		<button type="submit" id="send">
 			<img src="images/search.png">
 		</button>
 	</form>
+  <div class="list">
 	<ul>
 		<?php
-		//include - подключить файл, а имеено список контактов 
+		//include - подключить файл, а имеено список контактов
 		include $_SERVER['DOCUMENT_ROOT'] . "/parts/list.php";
 		?>
 	</ul>
